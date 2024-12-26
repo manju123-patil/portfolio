@@ -1,0 +1,511 @@
+* {
+  background-color: lightblue;
+}
+
+.hello1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  height: 300px;
+  width: 200px;
+  border-radius: 100%;
+  box-shadow: 0 0 50px #2b3830;
+}
+
+img:hover {
+  animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.05;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+  background-color: #f7f8fa;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.frame {
+  text-align: center;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(5, 3, 3, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  color: #e0e0e0;
+  outline: none;
+  background-color: black;
+  box-shadow: 0 0 0 3px rgba(2, 2, 2, 0.5);
+  transform: translateY(1px);
+}
+
+
+.button span {
+  font-size: 1.1rem;
+}
+
+.button:focus {
+  outline: none;
+  color: #e0e0e0;
+  background-color: black;
+  box-shadow: 0 0 0 3px rgba(5, 3, 3, 0.5);
+}
+
+
+
+#skills {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.skill-row {
+  text-align: center;
+  position: relative;
+}
+
+.circle {
+  transform: rotate;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e0e0e0;
+}
+
+.circle-fg {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 10;
+  stroke: #28a745;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  z-index: 10;
+}
+
+.progress-circle[data-progress="85"] .circle-fg {
+  stroke: #28a745;
+  stroke-dashoffset: calc(314 - (314 * 85) / 100);
+}
+
+.progress-circle[data-progress="75"] .circle-fg {
+  stroke: #17a2b8;
+  stroke-dashoffset: calc(314 - (314 * 75) / 100);
+}
+
+.progress-circle[data-progress="70"] .circle-fg {
+  stroke: #ffc107;
+  stroke-dashoffset: calc(314 - (314 * 70) / 100);
+}
+
+.progress-circle[data-progress="60"] .circle-fg {
+  stroke: #dc3545;
+  stroke-dashoffset: calc(314 - (314 * 60) / 100);
+}
+
+@media (max-width: 768px) {
+
+  .skills-row {
+    justify-content: space-evenly;
+  }
+
+  .progress-circle {
+    margin: 10px;
+  }
+
+  .progress-text {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+h1.fsd {
+  background-image: url(https://i.gifer.com/fxp1.gif);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2.fsd {
+  background-image: url(https://i.gifer.com/fyGu.gif);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+#projects {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#projects .education {
+  margin-bottom: 60px;
+}
+
+
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  border-radius: 8px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.project-card .card-body {
+  padding: 20px;
+}
+
+.project-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.project-card .card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-card .btn {
+  font-size: 1rem;
+  background-color: #f4f8fb;
+  color: #090606;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+  background-color: #040405;
+  color: #f4f8fb;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.col-md-4 {
+  flex: 1 1 30%;
+  max-width: 30%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.grid-item {
+  background-color: #f4f4f4;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-heading i {
+  margin-right: 10px;
+  font-size: 1.6rem;
+  color: #007bff;
+}
+
+.contact-detail {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* General styling for the Education section */
+#education {
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+}
+
+
+
+/* Styling for each education block */
+.col-3 {
+  font-weight: 700;
+  border: 2px solid #2980b9;
+  /* Border color */
+  margin: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect for education block */
+.col-3:hover {
+  font-weight: 700;
+  text-decoration: none;
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  background-color: #2980b9;
+  color: #000000
+}
+
+/* Title inside each block */
+.col-3 h3 {
+  font-weight: 700;
+  background-color: #2980b9;
+  /* Blue background for each title */
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Links inside the blocks */
+.col-3 h4 {
+
+  font-size: 1.25rem;
+  color: #3498db;
+  /* Blue color for the links */
+  text-align: center;
+  margin: 10px 0;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+/* Change color of the links when hovering */
+.col-3 h4:hover {
+  font-weight: 700;
+  color: #2980b9;
+  text-decoration: none;
+  color: #000000
+}
+
+/* Styling for the text below the links (percentage, SGPA, etc.) */
+.col-3 h5 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.col-3 a {
+  text-decoration: none;
+  /* Remove the underline */
+}
+
+@media (max-width: 768px) {
+  .col-3 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* Align and space out columns in a row */
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+
+
+
+/* Style for the icons */
+.hello1 .main a {
+  color: #333;
+  /* Default color */
+  margin: 0 10px;
+  /* Space between icons */
+  font-size: 1.5rem;
+  /* Icon size */
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Smooth transition */
+}
+
+.hello1 .main a:hover {
+  color: #007bff;
+  /* Change color on hover (blue for example) */
+  transform: scale(1.1);
+  /* Slightly enlarge the icon */
+}
+
+/* Optionally, you can add specific colors for each icon */
+.hello1 .main a.fa-instagram:hover {
+  color: #E4405F;
+  /* Instagram color */
+}
+
+.hello1 .main a.fa-whatsapp:hover {
+  color: #25D366;
+  /* WhatsApp color */
+}
+
+.hello1 .main a.fa-envelope:hover {
+  color: #DD4B39;
+  /* Mail color */
+}
+
+.hello1 .main a.fa-github:hover {
+  color: #333;
+  /* GitHub color */
+}
+
+.logo{
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+.logo span{
+  gap: 2px;
+  color: #fa0101;
+  text-shadow: 0 0 5px #ffffff;
+}
